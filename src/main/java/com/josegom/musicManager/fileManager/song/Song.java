@@ -13,6 +13,8 @@ public class Song {
     private Set<String> singer;
     private Short year;
     private String lyrics;
+    private String localRelativePath;
+    private String URL;
 
 }
 
