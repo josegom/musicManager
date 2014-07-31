@@ -1,4 +1,4 @@
-package com.josegom.musicManager.fileManager.song;
+package com.josegom.musicManager.song;
 
 /**
  * Created by jmgomez on 24/07/14.

@@ -1,4 +1,4 @@
-package com.josegom.musicManager.fileManager.song;
+package com.josegom.musicManager.song;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
@@ -15,13 +15,13 @@ import java.util.Set;
 /**
  * Created by jmgomez on 24/07/14.
  */
-public abstract class SimpleStorable {
+public abstract class SimpleStorable<T> {
 
     protected Integer id;
     protected String value;
 
     protected abstract String getName();
-    Set<SimpleStorable> allT = null;
+    Set<T> allT = null;
 
     public SimpleStorable(Integer id, String value) {
         this.id = id;
@@ -29,7 +29,7 @@ public abstract class SimpleStorable {
 
     }
 
-    public Set<Tag> getAllTags()  {
+    public Set<T> getAll()  {
         SAXParserFactory factory = SAXParserFactory.newInstance();
         try {
             SAXParser saxParser = factory.newSAXParser();
@@ -40,7 +40,7 @@ public abstract class SimpleStorable {
         }
 
 
-        return null;
+        return allT;
     }
 
     @Override
@@ -82,7 +82,7 @@ public abstract class SimpleStorable {
                 st = (SimpleStorable)type.newInstance();
                 st.setId(Integer.parseInt(attributes.getValue(0)));
                 st.setValue(attributes.getValue(1));
-                allT.add((SimpleStorable)st);
+                allT.add((T)st);
             } catch (InstantiationException e) {
                 e.printStackTrace();
             } catch (IllegalAccessException e) {

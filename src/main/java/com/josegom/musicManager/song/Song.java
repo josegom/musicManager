@@ -1,4 +1,4 @@
-package com.josegom.musicManager.fileManager.song;
+package com.josegom.musicManager.song;
 
 import java.util.Set;
 
