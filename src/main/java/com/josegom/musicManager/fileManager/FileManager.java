@@ -27,14 +27,13 @@ public class FileManager {
         for (int i=0;i<files.length;i++){
             System.out.println(files[i]);
         }
-        return null;
+        return files;
     }
 
-
-    public static void main(String args[])
-    {
-        new FileManager().readAllSourcesFiles();
+    public String getMusicPath(){
+        return path;
     }
+
 
 
 

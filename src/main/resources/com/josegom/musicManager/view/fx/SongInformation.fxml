@@ -5,22 +5,29 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane fx:controller="com.josegom.musicManager.view.fx.InitializeConfigSong"
+<GridPane fx:controller="com.josegom.musicManager.view.fx.ConfigSongForm"
           xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
     <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
-    <Text text="Configure The Song"
+    <Text fx:id="textField"  text="Configure The Song"
           GridPane.columnIndex="0" GridPane.rowIndex="0"
           GridPane.columnSpan="2"/>
-    <Label text="Título:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <Label fx:id="title" text="Title:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
     <TextField
             GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-    <Label text="Cantante:"
-           GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-    <TextField
-               GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-    <CheckBox disable="false"  mnemonicParsing="false" text="CheckBox"
-              GridPane.columnIndex="2" GridPane.rowIndex="2" 
-            />
+    <Label text="Cantante:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    <CheckBox disable="false"  mnemonicParsing="false" text="bachata" fx:id="Style1"  GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <CheckBox disable="false"  mnemonicParsing="false" text="merengue" fx:id="Style2"  GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    <CheckBox disable="false"  mnemonicParsing="false" text="pop" fx:id="Style3"  GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <CheckBox disable="false"  mnemonicParsing="false" text="rock" fx:id="Style4"  GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <CheckBox disable="false"  mnemonicParsing="false" text="salsa" fx:id="Style5"  GridPane.columnIndex="0" GridPane.rowIndex="5" />
+    <CheckBox disable="false"  mnemonicParsing="false" text="vals" fx:id="Style6"  GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+    <Button text="Acept" GridPane.columnIndex="0" GridPane.rowIndex="6" onAction="#aceptAction"/>
+    <Button text="Play" GridPane.columnIndex="1" GridPane.rowIndex="6" onAction="#playAction"/>
+    <Button text="Next" GridPane.columnIndex="2" GridPane.rowIndex="6"  onAction="#nextAction"/>
+
+
 </GridPane>
 
 

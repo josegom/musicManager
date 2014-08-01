@@ -1,6 +1,6 @@
 package com.josegom.musicManager;
 
-import com.josegom.musicManager.view.fx.ConfigSong;
+import com.josegom.musicManager.view.fx.ConfigSongController;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -18,7 +18,7 @@ public class Launcher extends Application{
 
     @Override
     public void start(Stage stage) throws Exception {
-        ConfigSong configSong = new ConfigSong();
-        configSong.print(stage);
+        ConfigSongController configSong = new ConfigSongController();
+        configSong.start(stage);
     }
 }
