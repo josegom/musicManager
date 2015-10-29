@@ -6,7 +6,7 @@ import javafx.stage.Stage;
 
 
 /**
- * Created by jmgomez on 31/07/14.
+ * This class must launchs the applicataion.
  */
 public class Launcher extends Application{
 
